@@ -1,0 +1,7 @@
+<!-- _includes is stuff that always include on the page -->
+
+<nav>
+  {% for item in site.data.navigation %}
+    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+  {% endfor %}
+</nav>

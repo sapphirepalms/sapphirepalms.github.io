@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+
+<!-- put comments at the bottom, putting before front matter messes things up lol -->
+
+<!-- post.url set up by jekyll to OUTPATH PATH OF -->
+<!-- post.title pulled from post filename, can be OVERRIDDEN BY ADDING TITLE TO FRONT MATTER -->
+<!-- post.excerpt first paragraph of content BY DEFAULT-->
